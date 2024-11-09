@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		8042AC352CDFB0B300B98F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8042AC342CDFB0B300B98F52 /* AppDelegate.swift */; };
 		8042AC372CDFB0B300B98F52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8042AC362CDFB0B300B98F52 /* SceneDelegate.swift */; };
-		8042AC392CDFB0B300B98F52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8042AC382CDFB0B300B98F52 /* ViewController.swift */; };
-		8042AC3C2CDFB0B300B98F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8042AC3A2CDFB0B300B98F52 /* Main.storyboard */; };
+		8042AC392CDFB0B300B98F52 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8042AC382CDFB0B300B98F52 /* ToDoListViewController.swift */; };
 		8042AC3F2CDFB0B300B98F52 /* TaskList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8042AC3D2CDFB0B300B98F52 /* TaskList.xcdatamodeld */; };
 		8042AC412CDFB0B400B98F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8042AC402CDFB0B400B98F52 /* Assets.xcassets */; };
 		8042AC442CDFB0B400B98F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8042AC422CDFB0B400B98F52 /* LaunchScreen.storyboard */; };
+		8042AC522CDFB50200B98F52 /* Tasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8042AC502CDFB50200B98F52 /* Tasks.xcdatamodeld */; };
+		8042AC542CDFB61100B98F52 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8042AC532CDFB61100B98F52 /* TaskViewModel.swift */; };
+		8042AC562CDFB80B00B98F52 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8042AC552CDFB80B00B98F52 /* TaskListViewModel.swift */; };
+		8042AC582CDFBC1E00B98F52 /* AddNewTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8042AC572CDFBC1E00B98F52 /* AddNewTaskViewModel.swift */; };
+		8042AC5A2CDFBC9500B98F52 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8042AC592CDFBC9500B98F52 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8042AC312CDFB0B300B98F52 /* TaskList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8042AC342CDFB0B300B98F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8042AC362CDFB0B300B98F52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8042AC382CDFB0B300B98F52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8042AC3B2CDFB0B300B98F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8042AC382CDFB0B300B98F52 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		8042AC3E2CDFB0B300B98F52 /* TaskList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskList.xcdatamodel; sourceTree = "<group>"; };
 		8042AC402CDFB0B400B98F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8042AC432CDFB0B400B98F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8042AC452CDFB0B400B98F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8042AC512CDFB50200B98F52 /* Tasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tasks.xcdatamodel; sourceTree = "<group>"; };
+		8042AC532CDFB61100B98F52 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		8042AC552CDFB80B00B98F52 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		8042AC572CDFBC1E00B98F52 /* AddNewTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTaskViewModel.swift; sourceTree = "<group>"; };
+		8042AC592CDFBC9500B98F52 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,60 @@
 		8042AC332CDFB0B300B98F52 /* TaskList */ = {
 			isa = PBXGroup;
 			children = (
-				8042AC342CDFB0B300B98F52 /* AppDelegate.swift */,
-				8042AC362CDFB0B300B98F52 /* SceneDelegate.swift */,
-				8042AC382CDFB0B300B98F52 /* ViewController.swift */,
-				8042AC3A2CDFB0B300B98F52 /* Main.storyboard */,
-				8042AC402CDFB0B400B98F52 /* Assets.xcassets */,
-				8042AC422CDFB0B400B98F52 /* LaunchScreen.storyboard */,
-				8042AC452CDFB0B400B98F52 /* Info.plist */,
-				8042AC3D2CDFB0B300B98F52 /* TaskList.xcdatamodeld */,
+				8042AC4F2CDFB3EE00B98F52 /* Views */,
+				8042AC4E2CDFB3DC00B98F52 /* ViewControllers */,
+				8042AC4D2CDFB3BB00B98F52 /* ViewModels */,
+				8042AC4C2CDFB3A800B98F52 /* Resources */,
+				8042AC4B2CDFB37700B98F52 /* SystemFiles */,
 			);
 			path = TaskList;
+			sourceTree = "<group>";
+		};
+		8042AC4B2CDFB37700B98F52 /* SystemFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8042AC3D2CDFB0B300B98F52 /* TaskList.xcdatamodeld */,
+				8042AC422CDFB0B400B98F52 /* LaunchScreen.storyboard */,
+				8042AC452CDFB0B400B98F52 /* Info.plist */,
+				8042AC402CDFB0B400B98F52 /* Assets.xcassets */,
+				8042AC362CDFB0B300B98F52 /* SceneDelegate.swift */,
+				8042AC342CDFB0B300B98F52 /* AppDelegate.swift */,
+			);
+			path = SystemFiles;
+			sourceTree = "<group>";
+		};
+		8042AC4C2CDFB3A800B98F52 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8042AC502CDFB50200B98F52 /* Tasks.xcdatamodeld */,
+				8042AC592CDFBC9500B98F52 /* CoreDataManager.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8042AC4D2CDFB3BB00B98F52 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8042AC532CDFB61100B98F52 /* TaskViewModel.swift */,
+				8042AC552CDFB80B00B98F52 /* TaskListViewModel.swift */,
+				8042AC572CDFBC1E00B98F52 /* AddNewTaskViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8042AC4E2CDFB3DC00B98F52 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8042AC382CDFB0B300B98F52 /* ToDoListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8042AC4F2CDFB3EE00B98F52 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +182,6 @@
 			files = (
 				8042AC442CDFB0B400B98F52 /* LaunchScreen.storyboard in Resources */,
 				8042AC412CDFB0B400B98F52 /* Assets.xcassets in Resources */,
-				8042AC3C2CDFB0B300B98F52 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,8 +192,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8042AC562CDFB80B00B98F52 /* TaskListViewModel.swift in Sources */,
+				8042AC582CDFBC1E00B98F52 /* AddNewTaskViewModel.swift in Sources */,
 				8042AC3F2CDFB0B300B98F52 /* TaskList.xcdatamodeld in Sources */,
-				8042AC392CDFB0B300B98F52 /* ViewController.swift in Sources */,
+				8042AC542CDFB61100B98F52 /* TaskViewModel.swift in Sources */,
+				8042AC392CDFB0B300B98F52 /* ToDoListViewController.swift in Sources */,
+				8042AC522CDFB50200B98F52 /* Tasks.xcdatamodeld in Sources */,
+				8042AC5A2CDFBC9500B98F52 /* CoreDataManager.swift in Sources */,
 				8042AC352CDFB0B300B98F52 /* AppDelegate.swift in Sources */,
 				8042AC372CDFB0B300B98F52 /* SceneDelegate.swift in Sources */,
 			);
@@ -151,14 +207,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8042AC3A2CDFB0B300B98F52 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8042AC3B2CDFB0B300B98F52 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8042AC422CDFB0B400B98F52 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,10 +345,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TaskList/Info.plist;
+				INFOPLIST_FILE = TaskList/SystemFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,10 +371,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TaskList/Info.plist;
+				INFOPLIST_FILE = TaskList/SystemFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -374,6 +420,16 @@
 			);
 			currentVersion = 8042AC3E2CDFB0B300B98F52 /* TaskList.xcdatamodel */;
 			path = TaskList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		8042AC502CDFB50200B98F52 /* Tasks.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8042AC512CDFB50200B98F52 /* Tasks.xcdatamodel */,
+			);
+			currentVersion = 8042AC512CDFB50200B98F52 /* Tasks.xcdatamodel */;
+			path = Tasks.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
