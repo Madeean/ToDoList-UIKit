@@ -9,7 +9,7 @@ import Foundation
 
 class AddNewTaskViewModel {
     func addTask(name: String, dueOn: Date) {
-        
+        CoreDataManager.shared.addNewTask(name: name, dueOn: dueOn)
     }
         
 }
