@@ -9,12 +9,62 @@ import CoreData
 import UIKit
 
 class ToDoListViewController: UIViewController {
+    
+    let viewModel = TaskListViewModel()
+    
+    lazy var celebrateAnimationView: CelebrationAnimationView = {
+       let v = CelebrationAnimationView(fileName: "animationLottie")
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.isHidden = true
+        return v
+    }()
+    
+    lazy var tableView: UITableView = {
+        let v = UITableView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.dataSource = self
+        v.delegate = self
+        v.register(ToDoTableViewCell.self, forCellReuseIdentifier: "ToDoCell")
+        v.register(SummaryTableViewCell.self, forCellReuseIdentifier: "SummaryCell")
+        v.estimatedRowHeight = 200
+        v.rowHeight = UITableView.automaticDimension
+        return v
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.systemBackground
         title = "Madee"
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewTask))
+        
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+        ])
+        
+        view.addSubview(celebrateAnimationView)
+        NSLayoutConstraint.activate([
+            celebrateAnimationView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            celebrateAnimationView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            celebrateAnimationView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            celebrateAnimationView.topAnchor.constraint(equalTo: view.topAnchor),
+        ])
+    }
+    
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.getAll()
+        tableView.reloadData()
+//        celebrateAnimationView.play { finished in
+//            print("Done")
+//        }
     }
 
     @objc

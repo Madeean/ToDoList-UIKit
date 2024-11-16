@@ -45,27 +45,26 @@ class ToDoTableViewCell: UITableViewCell {
         selectionStyle = .none
         contentView.addSubview(taskNameLabel)
         contentView.addSubview(dueOrCompletedLabel)
-        contentView.addSubview(dueOrCompletedLabel)
+        contentView.addSubview(completedLabel)
         
         setupContraints()
     }
     
     func setupContraints() {
         NSLayoutConstraint.activate([
-            taskNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            taskNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            taskNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            
-            dueOrCompletedLabel.topAnchor.constraint(equalTo: taskNameLabel.bottomAnchor, constant: 16),
-            dueOrCompletedLabel.leadingAnchor.constraint(equalTo: taskNameLabel.leadingAnchor),
-            dueOrCompletedLabel.bottomAnchor.constraint(equalTo: taskNameLabel.bottomAnchor, constant: -8),
-            
-            completedLabel.topAnchor.constraint(equalTo: taskNameLabel.bottomAnchor, constant: 16),
-            completedLabel.trailingAnchor.constraint(equalTo: taskNameLabel.trailingAnchor),
-            completedLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
-            
-            contentView.bottomAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: taskNameLabel.bottomAnchor, multiplier: 8)
-        ])
+                taskNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+                taskNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+                taskNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+                
+                dueOrCompletedLabel.topAnchor.constraint(equalTo: taskNameLabel.bottomAnchor, constant: 16),
+                dueOrCompletedLabel.leadingAnchor.constraint(equalTo: taskNameLabel.leadingAnchor),
+                dueOrCompletedLabel.trailingAnchor.constraint(lessThanOrEqualTo: completedLabel.leadingAnchor, constant: -8),
+                
+                completedLabel.centerYAnchor.constraint(equalTo: dueOrCompletedLabel.centerYAnchor),
+                completedLabel.trailingAnchor.constraint(equalTo: taskNameLabel.trailingAnchor),
+
+                contentView.bottomAnchor.constraint(greaterThanOrEqualTo: dueOrCompletedLabel.bottomAnchor, constant: 8)
+            ])
     }
     
     func configure(task: TaskViewModel) {
